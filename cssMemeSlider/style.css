@@ -27,9 +27,61 @@ input {
   height: 1.5rem;
 }
 
-input:hover {
+/* .input:hover {
   background-color: brown;
+} */
+
+.label:hover {
+  background: gray;
 }
+
+.label:active {
+  background: white;
+}
+
+.input:checked + .label {
+  background: white;
+}
+
+
+
+
+
+
+.container_input_slider:has(#slide-one:checked) ~ .slider .container_slider  {
+  transform: translateX(0);
+}
+
+.container_input_slider:has(#slide-two:checked) ~ .slider .container_slider {
+  transform: translateX(-100%);
+}
+
+.container_input_slider:has(#slide-three:checked) ~ .slider .container_slider {
+  transform: translateX(-200%);
+}
+
+.container_input_slider:has(#slide-four:checked) ~ .slider .container_slider {
+  transform: translateX(-300%);
+}
+
+.container_input_slider:has(#slide-five:checked) ~ .slider .container_slider {
+  transform: translateX(-400%);
+}
+
+.container_input_slider:has(#slide-six:checked) ~ .slider .container_slider {
+  transform: translateX(-500%);
+}
+
+
+
+
+
+.container_common {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+
 
 .container_text_slider p {
   font-size: 2.5rem;
