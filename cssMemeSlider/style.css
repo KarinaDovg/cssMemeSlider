@@ -2,6 +2,7 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: #A57;
+  margin: 0;
 }
 
 input {
@@ -21,7 +22,6 @@ input {
   width: 500%;
   height: 100%;
   display: flex;
-  column-gap: 110px;
   transition: 1s ease all;
 }
 
@@ -87,7 +87,7 @@ label:active .firstBtn {
 .secondBtn {
   width: 80%;
   height: 80%;
-   margin: 10%;
+  margin: 10%;
   border-radius: 50%;
   background-color: transparent;
   transition: 0.5s;
@@ -100,12 +100,11 @@ label:active .firstBtn {
   height: 15%;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
+  width: 60%;
   margin: 0 auto;
 }
 
 .label_slider {
-  padding-right: 15%;
   padding-top: 5%;
 }
 
@@ -124,7 +123,6 @@ label:active .firstBtn {
   display: flex;
   column-gap: 10%;
   transition: 1s ease all;
-  padding-left: 25%;
 }
 
 .container_text_slider p {
@@ -133,21 +131,54 @@ label:active .firstBtn {
 } 
 
 #slide-one:checked~.container_common .container_text_slider {
-  margin-left: 0;
+  margin-left: 10%;
 }
 
 #slide-two:checked~.container_common .container_text_slider {
-  margin-left: -98%;
+  margin-left: -105%;
 }
 
 #slide-three:checked~.container_common .container_text_slider {
-  margin-left: -185%;
+  margin-left: -200%;
 }
 
 #slide-four:checked~.container_common .container_text_slider {
-  margin-left: -295%;
+  margin-left: -317%;
 }
 
 #slide-five:checked~.container_common .container_text_slider {
-  margin-left: -380%;
+  margin-left: -412%;
+}
+
+@media (max-width: 1024px) {
+  .container_text_slider p {
+    font-size: 1rem;
+  }
+  .label {
+    height: 5vh;
+    width: 5vh;
+  }
+  .label_slider {
+    width: 30%;
+    padding-top: 3%;
+  }
+  #slide-one:checked~.container_common .container_text_slider {
+    margin-left: 0;
+  }
+  
+  #slide-two:checked~.container_common .container_text_slider {
+    margin-left: -122%;
+  }
+  
+  #slide-three:checked~.container_common .container_text_slider {
+    margin-left: -221%;
+  }
+  
+  #slide-four:checked~.container_common .container_text_slider {
+    margin-left: -348%;
+  }
+  
+  #slide-five:checked~.container_common .container_text_slider {
+    margin-left: -450%;
+  }
 }
