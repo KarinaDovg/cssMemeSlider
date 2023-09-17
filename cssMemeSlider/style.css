@@ -1,0 +1,320 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #A57;
+  margin: 0;
+}
+
+input {
+  display: none;
+}
+
+.slider {
+  padding-top: 5%;
+  width: 60%;
+  height: 70%;
+  margin: 0 auto;
+  border-radius: 5%;
+  overflow: hidden;
+}
+
+.container_slider {
+  width: 500%;
+  height: 100%;
+  display: flex;
+  transition: 1s ease all;
+}
+
+.container_slider img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5%;
+}
+
+#slide-one:checked~.slider .container_slider {
+  margin-left: 0;
+}
+
+#slide-two:checked~.slider .container_slider {
+  margin-left: -100%;
+}
+
+#slide-three:checked~.slider .container_slider {
+  margin-left: -200%;
+}
+
+#slide-four:checked~.slider .container_slider {
+  margin-left: -300%;
+}
+
+#slide-five:checked~.slider .container_slider {
+  margin-left: -400%;
+}
+
+#slide-one:checked~.container_common .label .firstBtn_one {
+  background-color: darkred;
+}
+
+#slide-two:checked~.container_common label .firstBtn_two {
+  background-color: darkred;
+}
+
+#slide-three:checked~.container_common label .firstBtn_three {
+  background-color: darkred;
+}
+
+#slide-four:checked~.container_common label .firstBtn_four {
+  background-color: darkred;
+}
+
+#slide-five:checked~.container_common label .firstBtn_five {
+  background-color: darkred;
+} 
+
+.label_slider {
+  width: 40%;
+  display: flex;
+  padding-top: 3%;
+} 
+
+label {
+  display: block;
+  height: 10vh;
+  width: 10vh;
+  transition: 0.5s;
+  cursor: pointer;
+  margin-right: 2%;
+}
+
+label:hover .firstBtn_one, label:hover .firstBtn_two, label:hover .firstBtn_three, label:hover .firstBtn_four, label:hover .firstBtn_five {
+  background-color: yellowgreen;
+}
+
+label:active .firstBtn_one, label:active .firstBtn_two, label:active .firstBtn_three, label:active .firstBtn_four, label:active .firstBtn_five {
+  background-color: blueviolet;
+}
+
+.firstBtn_one, .firstBtn_two, .firstBtn_three, .firstBtn_four, .firstBtn_five {
+  height: 40%;
+  width: 40%;
+  margin: 15%;
+  border-radius: 100%;
+  background-color: #FEA;
+  transition: 0.5s;
+  border: transparent solid;
+}
+
+.secondBtn {
+  width: 80%;
+  height: 80%;
+  margin: 10%;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: 0.5s;
+}
+
+.container_common {
+  margin-top: 1%;
+  display: flex;
+  flex-direction: row-reverse;
+  height: 15%;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.label_slider {
+  padding-top: 5%;
+}
+
+.text_slider {
+  padding-top: 5%;
+  width: 60%;
+  height: 70%;
+  margin: 0 auto;
+  border-radius: 5%;
+  overflow: hidden;
+}
+
+.container_text_slider {
+  width: 500%;
+  height: 100%;
+  display: flex;
+  column-gap: 10%;
+  transition: 1s ease all;
+}
+
+.container_text_slider p {
+  font-size: 2.5rem;
+  font-style: oblique;
+} 
+
+#slide-one:checked~.container_common .container_text_slider {
+  margin-left: 10%;
+}
+
+#slide-two:checked~.container_common .container_text_slider {
+  margin-left: -105%;
+}
+
+#slide-three:checked~.container_common .container_text_slider {
+  margin-left: -200%;
+}
+
+#slide-four:checked~.container_common .container_text_slider {
+  margin-left: -317%;
+}
+
+#slide-five:checked~.container_common .container_text_slider {
+  margin-left: -412%;
+}
+
+@media (max-width: 1024px) {
+  .container_text_slider p {
+    font-size: 1rem;
+  }
+  .label {
+    height: 5vh;
+    width: 5vh;
+  }
+  .label_slider {
+    width: 30%;
+    padding-top: 3%;
+  }
+  #slide-one:checked~.container_common .container_text_slider {
+    margin-left: 0;
+  }
+  #slide-two:checked~.container_common .container_text_slider {
+    margin-left: -122%;
+  }
+  #slide-three:checked~.container_common .container_text_slider {
+    margin-left: -221%;
+  }
+  #slide-four:checked~.container_common .container_text_slider {
+    margin-left: -348%;
+  }
+  #slide-five:checked~.container_common .container_text_slider {
+    margin-left: -450%;
+  }
+}
+
+@media (max-width: 980px) {
+  .slider {
+    width: 55%;
+    height: 62%;
+  }
+  .container_common {
+    width: 55%;
+  }
+  .container_text_slider {
+    column-gap: 10%;
+  }
+  .container_text_slider p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 950px) {
+  .slider {
+    width: 50%;
+    height: 56%;
+  }
+  .container_common {
+    width: 50%;
+  }
+  .container_text_slider {
+    column-gap: 12%;
+  }
+  .container_text_slider p {
+    font-size: 0.7rem;
+  }
+  .label_slider {
+    padding-top: 2%;
+  }
+  .firstBtn_one, .firstBtn_two, .firstBtn_three, .firstBtn_four, .firstBtn_five {
+    height: 30%;
+    width: 30%;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .slider {
+    width: 45%;
+    height: 39%;
+  }
+  .container_common {
+    flex-direction: column;
+    width: 38%;
+  }
+  .label {
+    height: 3vh;
+    width: 3vh;
+  }
+  .firstBtn_one, .firstBtn_two, .firstBtn_three, .firstBtn_four, .firstBtn_five {
+    height: 20%;
+    width: 20%;
+  }
+  .text_slider {
+    padding-top: 0%;
+    margin: 0;
+    width: 103%;
+  }
+  #slide-three:checked~.container_common .container_text_slider {
+    margin-left: -222%;
+  }
+  #slide-four:checked~.container_common .container_text_slider {
+    margin-left: -351%;
+  }
+  #slide-five:checked~.container_common .container_text_slider {
+    margin-left: -452%;
+  }
+}
+
+@media (max-width: 730px) {
+
+  #slide-three:checked~.container_common .container_text_slider {
+    margin-left: -229%;
+  }
+  #slide-four:checked~.container_common .container_text_slider {
+    margin-left: -359%;
+  }
+  #slide-five:checked~.container_common .container_text_slider {
+    margin-left: -465%;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .slider {
+    width: 56%;
+    height: 33%;
+  }
+  .text_slider {
+    width: 140%;
+  }
+  .container_text_slider p {
+    font-size: 0.6rem;
+  }
+  .label {
+    height: 2vh;
+    width: 2vh;
+  }
+  .firstBtn_one, .firstBtn_two, .firstBtn_three, .firstBtn_four, .firstBtn_five {
+    height: 15%;
+    width: 15%;
+  }
+  #slide-two:checked~.container_common .container_text_slider {
+    margin-left: -117%;
+  }
+  #slide-three:checked~.container_common .container_text_slider {
+    margin-left: -217%;
+  }
+  #slide-four:checked~.container_common .container_text_slider {
+    margin-left: -340%;
+  }
+  #slide-five:checked~.container_common .container_text_slider {
+    margin-left: -443%;
+  }
+}
